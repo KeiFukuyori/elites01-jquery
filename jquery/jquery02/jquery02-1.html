@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <title></title>
+    <script>
+      $(function(){
+        var result;
+
+        result = $(".add-class");
+        console.log("classがadd-classの要素の数:" + result.length);
+
+        // div要素の取得し、クラスadd-classを設定
+        $("div").addClass("add-class");
+        console.log("クラスを変更しました!!");
+
+        result = $(".add-class");
+        console.log("classがadd-classの要素の数:" + result.length);
+        
+        // 推測：result.lengthの結果について、add-classというクラスはdiv配下に追加したため
+        // id1をもつdivと、id2をもつdivの二つに追加された。このため、値としては2が取得できる
+      });
+    </script>
+  </head>
+  <body>
+    <div id="id1" class="class1">id:id1/class:class1</div>
+    <div id="id2" class="class2">id:id2/class:class2</div>
+    <p class="class2">class:class2</p>
+  </body>
+</html>

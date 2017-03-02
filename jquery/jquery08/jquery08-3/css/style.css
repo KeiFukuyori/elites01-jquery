@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* リセット
+-----------------------------------------------------*/
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+/* スライダー
+-----------------------------------------------------*/
+/* スライダー全体のコンテナー */
+.slider {
+    height: 400px;
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+/* 全スライドのまとまり (スライドグループ) */
+.slider-slides {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    /* left は JavaScript で指定 */
+}
+
+/* 各スライド */
+.slider-slides .slide {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    /* left は JavaScript で指定 */
+}
+
+/* ナビゲーター
+-----------------------------------------------------*/
+.slider-nav a,
+.slider-indicator a {
+    overflow: hidden;
+}
+
+.slider-nav a:before,
+.slider-indicator a:before {
+    content: url(../img/sprites.png);
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.slider-nav a {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+}
+
+.slider-nav a.prev {
+    margin-left: -272px;
+}
+
+.slider-nav a.prev:before {
+    margin-top: -20px;
+}
+
+.slider-nav a.next {
+    margin-left: 200px;
+}
+
+.slider-nav a.next:before {
+    margin-left: -80px;
+    margin-top: -20px;
+}
+
+.slider-nav a.disabled {
+    display: none;
+}
+
+/* インジケーター
+-----------------------------------------------------*/
+.slider-indicator {
+    bottom: 30px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.slider-indicator a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.slider-indicator a.active {
+    cursor: default;
+}
+
+.slider-indicator a:before {
+    margin-left: -110px;
+}
+
+.slider-indicator a.active:before {
+    margin-left: -130px;
+}

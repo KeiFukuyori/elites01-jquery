@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <title>jquery</title>
+    <style>
+        .warning{ background: red;}
+    </style>
+  </head>
+  <body>
+    <div id="text">Before Text</div>
+    <button>Change Color!</button>
+    <script>
+    // クリックイベントを設定して背景色を変更する
+    // buttonクリックを追加して
+    $("button").on('click',function(){
+        // 背景色を変更する
+        // $("#text").addClass("warning"); 
+        // 要素（ここではtextを指定)をフェードアウトして消す
+        $('#text').fadeOut();
+    });
+    </script>
+  </body>
+</html>

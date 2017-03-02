@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.sample
+{
+    height: 250px;
+    width: 300px;
+    float: left;
+}
+.sample > div 
+{
+    height: 100px;
+    margin: 0 10%;
+    border: solid 1px;
+    background-color: blue;
+}

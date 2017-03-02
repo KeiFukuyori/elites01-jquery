@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.slide {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.slide h4 {
+    margin-top: 0;
+}
+
+.slide p:last-child {
+    margin-bottom: 0;
+}
+
+.slide+.slide {
+}
+
+.slide-primary {
+    border-left-color: #428bca;
+}
+
+.slide-primary h4 {
+    color: #428bca;
+}
+
+h4 {
+    margin: 0;
+    color: #000;
+}
+
+.slide-content {
+    padding: 10px 20px;
+}

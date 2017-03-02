@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>confirm</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+      $(function() {
+        // イベントの伝播を停止
+        $("a").click(function(event){
+          event.preventDefault();
+        });
+        // hide処理
+        $("#sample-hide").click(function(){
+          $(this).next().hide();
+        });
+        // show処理（初めは非表示としておく）
+        $("#sample-show").next().hide();
+        $("#sample-show").click(function(){
+          $(this).next().show();
+        });
+        // toggle処理
+        $("#sample-toggle").click(function(){
+          $(this).next().toggle();
+        });
+        // slideUp処理
+        $("#sample-slideup").click(function(){
+          $(this).next().slideUp();
+        });
+        // slideDown処理（初めは閉じておく）
+        $("#sample-slidedown").next().hide();
+        $("#sample-slidedown").click(function(){
+          $(this).next().slideDown();
+        });
+        // slideToggle処理
+        $("#sample-slidetoggle").click(function(){
+          $(this).next().slideToggle();
+        });
+        // fadeOut処理
+        $("#sample-fadeout").click(function(){
+          $(this).next().fadeOut();
+        });
+        // fadeIn処理（初めは閉じで置く）
+        $("#sample-fadein").next().hide();
+        $("#sample-fadein").click(function(){
+          $(this).next().fadeIn();
+        });
+        // fadeToggle処理
+        $("#sample-fadetoggle").click(function(){
+          $(this).next().fadeToggle();
+        });
+      })
+    </script>
+    <link rel="stylesheet" href="css/jquery04-1.css">
+    
+    /*下記のスタイルを使用せずにlinkを使用し、cssに記述して見た。*/
+      /*.sample {*/
+      /*  height: 250px;*/
+      /*          width: 300px;*/
+      /*          float: left;*/
+      /*}*/
+      /*.sample > div {*/
+      /*  height: 100px;*/
+      /*  margin: 0 10%;*/
+      /*  border: solid 1px;*/
+      /*  background-color: blue;*/
+      /*}*/
+    </style>
+  </head>
+  <body>
+    <div class="animation">
+      <div class="sample">
+        <p>hideメソッド<br>即座に非表示となります</p>
+        <a href="#" id="sample-hide">実行</a>
+        <div></div>
+      </div>
+      <div class="sample">
+        <p>showメソッド<br>即時に表示されます</p>
+        <a href="#" id="sample-show">実行</a>
+        <div></div>
+      </div>
+      <div class="sample">
+        <p>toggleメソッド<br>表示と非表示が繰り返されます</p>
+        <a href="#" id="sample-toggle">実行</a>
+        <div></div>
+      </div>
+      <div class="sample">
+        <p>slideUpメソッド<br>下から上に閉じていきます</p>
+        <a href="#" id="sample-slideup">実行</a>
+        <div></div>
+      </div>
+      <div class="sample">
+        <p>slideDownメソッド<br>上から下に開いていきます</p>
+        <a href="#" id="sample-slidedown">実行</a>
+        <div></div>
+      </div>
+      <div class="sample">
+        <p>slideToggleメソッド<br>上下に開閉します</p>
+        <a href="#" id="sample-slidetoggle">実行</a>
+        <div></div>
+      </div>
+      <div class="sample">
+        <p>fadeOutメソッド<br>少しずつ非表示になります</p>
+        <a href="#" id="sample-fadeout">実行</a>
+        <div></div>
+      </div>
+      <div class="sample">
+        <p>fadeInメソッド<br>少しずつ表示します</p>
+        <a href="#" id="sample-fadein">実行</a>
+        <div></div>
+      </div>
+      <div class="sample">
+        <p>fadeToggleメソッド<br>少しずつ表示と非表示が繰り返されます</p>
+        <a href="#" id="sample-fadetoggle">実行</a>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

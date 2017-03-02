@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>alert</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script>
+      $(function(){
+        $("#click").click(function(){
+          alert("クリックされました!!");
+        });
+        // name属性については[name=change]と記述し、changeイベントについては
+        // この要素内のvalueの値を見ているようだ
+        $("[name=change]").change(function(){
+          alert("変更されました!!");
+        });
+        $("form").submit(function(){
+          alert("フォームがsubmitされました!!");
+        });
+        $(".onmouse").mouseover(function(){
+          $(".message").html("マウスが乗っています!!");
+        });
+        $(".onmouse").mouseout(function(){
+          $(".message").html("マウスがはずれました!!");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="message">マウスが乗っていません。</div>
+    <div class="onmouse" style="width:300px; height:100px; background-color: #EEEEEE;">マウスを乗せてください</div>
+    <form>
+      <input type="text" name="change" value="テキストを変更してください。" size="50">
+      <button type="button" id="click">クリックしてください</button>
+      <button type="submit">送信</button>
+    </form>
+  </body>
+</html>

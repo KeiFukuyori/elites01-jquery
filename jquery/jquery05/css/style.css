@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.tab {
+    border-bottom: 1px solid #003d4c;
+    display: table;
+    width: 100%;
+}
+
+.tab > li {
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+    list-style-type: none;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #003d4c;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.tab-content {
+    padding: 10px 30px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <title></title>
+    <script>
+      $(function(){
+        var result;
+
+        result = $(".class");
+        console.log("classがadd-classの要素の数:" + result.length);
+
+        // div要素の取得し、クラスadd-classを設定
+        $("div").removeClass("class");
+        console.log("クラスを削除しました");
+
+        result = $(".class");
+        console.log("classがadd-classの要素の数:" + result.length);
+        
+        // 推測：最初は.classは二つ存在しているため、result.lengthの値としては2が取得される
+        //       この後、div領域からclassというクラスを削除すると、classというクラスは
+        //       div領域のみに定義されているため、result.lengthにて取得される値としては0になる
+         
+      });
+    </script>
+  </head>
+  <body>
+    <div id="id1" class="class">id:id1/class:class1</div>
+    <div id="id2" class="class">id:id2/class:class2</div>
+    <p class="class2">class:class2</p>
+  </body>
+</html>
